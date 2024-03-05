@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <title>VM store.</title>
+    <title>E-Waste SmartHub</title>
 </head>
 <body class="body">
     <section class="header">
         <div class="logo">
             <i class="ri-menu-line menu"></i>
-            <h2><span>VM</span> Store.</h2>
+            <h2><span>E-Waste </span>SmartHub</h2>
         </div>
         <div class="header--items">
             <i class="ri-search-2-line"></i>
@@ -85,7 +85,7 @@
         </div>
         <div class="main--container">
             <div class="section--title">
-                <h3 class="title">Welcome back, Jenny</h3>
+                <h3 class="title">Welcome back</h3>
                 <select name="date" id="date">
                     <option value="last7">Last 7 days</option>
                     <option value="lastmonth">Last month</option>
@@ -97,10 +97,10 @@
                 <div class="card card-1">
                     <div class="card--title">
                         <span class="card--icon icon"><i class="ri-shopping-bag-2-line"></i></span>
-                        <span>Sales</span>
+                        <span>User Registerations</span>
                     </div>
-                    <h3 class="card--value">$432,576.34 <i class="ri-arrow-up-circle-fill up"></i></h3>
-                    <h5 class="more">4,234 more than usual</h5>
+                    <h3 class="card--value">n number <i class="ri-arrow-up-circle-fill up"></i></h3>
+                    <h5 class="more">x more than usual</h5>
                     <div class="chart">
                         <canvas id="sales"></canvas>
                     </div>
@@ -108,10 +108,10 @@
                 <div class="card card-2">
                     <div class="card--title">
                         <span class="card--icon icon"><i class="ri-gift-line"></i></span>
-                        <span>Orders</span>
+                        <span>Ongoing Requests</span>
                     </div>
-                    <h3 class="card--value">2,567 <i class="ri-arrow-down-circle-fill down"></i></h3>
-                    <h5 class="less">234 less than usual</h5>
+                    <h3 class="card--value">2,567 <i class="ri-arrow-up-circle-fill up"></i></h3>
+                    <h5 class="less">234 more than usual</h5>
                     <div class="chart">
                         <canvas id="orders"></canvas>
                     </div>
@@ -119,10 +119,10 @@
                 <div class="card card-3">
                     <div class="card--title">
                         <span class="card--icon icon"><i class="ri-handbag-line"></i></span>
-                        <span>Products</span>
+                        <span>Items Recycled</span>
                     </div>
                     <h3 class="card--value">587 <i class="ri-arrow-up-circle-fill up"></i></h3>
-                    <h5 class="more">23 more than usual</h5>
+                    <h5 class="more">23 more than last month</h5>
                     <div class="chart">
                         <canvas id="products"></canvas>
                     </div>
@@ -130,10 +130,10 @@
                 <div class="card card-4">
                     <div class="card--title">
                         <span class="card--icon icon"><i class="ri-user-line"></i></span>
-                        <span>Customers</span>
+                        <span>Carbon emissions</span>
                     </div>
-                    <h3 class="card--value">4,300 <i class="ri-arrow-down-circle-fill down"></i></h3>
-                    <h5 class="less">34 less than usual</h5>
+                    <h3 class="card--value">587 <i class="ri-arrow-down-circle-fill down"></i></h3>
+                    <!-- <h5 class="less">34 less than usual</h5> -->
                     <div class="chart">
                         <canvas id="customers"></canvas>
                     </div>
@@ -141,7 +141,7 @@
             </div>
             <div class="target-vs-sales--container">
                 <div class="section--title">
-                    <h3 class="title">Sales difference</h3>
+                    <h3 class="title">Requests and Recycled Items</h3>
                     <div class="sales--value">
                         <div class="target">
                             <i class="ri-checkbox-blank-circle-fill circle"></i>
@@ -159,18 +159,18 @@
             </div>
             <div class="table">
                 <div class="section--title">
-                    <h3 class="title">Top products</h3>
+                    <h3 class="title">Ongoing Pickup Requests</h3>
                     <div></div>
                 </div>
                 <table>
                     <thead>
                         <tr>
-                            <th>Product name</th>
-                            <th>Order ID</th>
+                            <th>Product</th>
+                            <th>User ID</th>
                             <th>Price</th>
-                            <th>Sold</th>
-                            <th>Returned</th>
-                            <th>Sales</th>
+                            <th>Recycler assigned</th>
+                            <!-- <th>Returned</th> -->
+                            <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -178,8 +178,16 @@
                             <td>MacBook Air AAPL</td>
                             <td>#231234</td>
                             <td>$1846</td>
+                            <td>Yes</td>
+                            <!-- <td>12</td> -->
+                            <td>Pending</td>
+                        </tr>
+                        <tr>
+                            <td>MacBook Air AAPL</td>
+                            <td>#231234</td>
+                            <td>$1846</td>
                             <td>331</td>
-                            <td>12</td>
+                            <!-- <td>12</td> -->
                             <td>$337,218.54</td>
                         </tr>
                         <tr>
@@ -187,7 +195,7 @@
                             <td>#231234</td>
                             <td>$1846</td>
                             <td>331</td>
-                            <td>12</td>
+                            <!-- <td>12</td> -->
                             <td>$337,218.54</td>
                         </tr>
                         <tr>
@@ -195,7 +203,7 @@
                             <td>#231234</td>
                             <td>$1846</td>
                             <td>331</td>
-                            <td>12</td>
+                            <!-- <td>12</td> -->
                             <td>$337,218.54</td>
                         </tr>
                         <tr>
@@ -203,7 +211,7 @@
                             <td>#231234</td>
                             <td>$1846</td>
                             <td>331</td>
-                            <td>12</td>
+                            <!-- <td>12</td> -->
                             <td>$337,218.54</td>
                         </tr>
                         <tr>
@@ -211,7 +219,7 @@
                             <td>#231234</td>
                             <td>$1846</td>
                             <td>331</td>
-                            <td>12</td>
+                            <!-- <td>12</td> -->
                             <td>$337,218.54</td>
                         </tr>
                         <tr>
@@ -219,7 +227,7 @@
                             <td>#231234</td>
                             <td>$1846</td>
                             <td>331</td>
-                            <td>12</td>
+                            <!-- <td>12</td> -->
                             <td>$337,218.54</td>
                         </tr>
                         <tr>
@@ -227,15 +235,7 @@
                             <td>#231234</td>
                             <td>$1846</td>
                             <td>331</td>
-                            <td>12</td>
-                            <td>$337,218.54</td>
-                        </tr>
-                        <tr>
-                            <td>MacBook Air AAPL</td>
-                            <td>#231234</td>
-                            <td>$1846</td>
-                            <td>331</td>
-                            <td>12</td>
+                            <!-- <td>12</td> -->
                             <td>$337,218.54</td>
                         </tr>
                     </tbody>
