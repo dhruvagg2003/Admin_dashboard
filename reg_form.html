@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="reg_form.css">
+</head>
+<body>
+
+<section class="user">
+  <div class="user_options-container">
+    <div class="user_options-text">
+      <div class="user_options-unregistered">
+        <h2 class="user_unregistered-title">Don't have an account?</h2>
+        <p class="user_unregistered-text" style="font-size:25px;">A smart choice for a Greener tomorrow.</p>
+        <button class="user_unregistered-signup" id="signup-button">Sign up</button>
+      </div>
+
+      <div class="user_options-registered">
+        <h2 class="user_registered-title">Have an account?</h2>
+        <p class="user_registered-text">Kindly enter your credentials.</p>
+        <!-- Add an onclick attribute to call a JavaScript function for redirection -->
+        <button class="user_registered-login" id="login-button" >Login</button>
+      </div>
+      
+      
+      
+    
+    <div class="user_options-forms" id="user_options-forms">
+      <div class="user_forms-login">
+        <h2 class="forms_title">Login</h2>
+        <form class="forms_form">
+          <fieldset class="forms_fieldset">
+            <div class="forms_field">
+              <input type="email"id="email" placeholder="Email" class="forms_field-input" required autofocus />
+            </div>
+            <div class="forms_field">
+              <input type="password" id="password" placeholder="Password" class="forms_field-input" required />
+            </div>
+          </fieldset>
+          <div class="forms_buttons">
+            <button type="button" class="forms_buttons-forgot">Forgot password?</button>
+            <button type="button" class="forms_buttons-forgot"><a href="admin_reg_form.html">Admin Login</a></button>
+            <input type="button" value="Log In" class="forms_buttons-action" onclick="redirectToLoginPage()">
+
+        <script>
+            function redirectToLoginPage() {
+    // Retrieve email and password values
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    // Check if both email and password are filled
+    if (email.trim() !== "" && password.trim() !== "") {
+      // If both fields are filled, redirect to mod_index.html
+      window.location.href = "mod_index.html";
+    } else {
+      // If any field is empty, display an alert
+      alert("Please fill in both email and password fields.");
+    }
+}
+        </script>
+        
+          </div>
+        </form>
+      </div>
+      <div class="user_forms-signup">
+        <h2 class="forms_title">Sign Up</h2>
+        <form class="forms_form">
+          <fieldset class="forms_fieldset">
+            <div class="forms_field">
+              <input type="text" placeholder="Full Name" class="forms_field-input" required />
+            </div>
+            <div class="forms_field">
+              <input type="email" placeholder="Email" class="forms_field-input" required />
+            </div>
+            <div class="forms_field">
+              <input type="password" placeholder="Password" class="forms_field-input" required />
+            </div>
+          </fieldset>
+          <div class="forms_buttons">
+            <input type="submit" value="Sign up" class="forms_buttons-action">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="reg_form.js"></script>
+
+</body>
+</html>

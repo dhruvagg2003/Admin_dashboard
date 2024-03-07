@@ -1,0 +1,60 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: hsl(152, 54%, 59%);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 870px;
+    margin: auto;
+}
+
+/* Centered image */
+.center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Blog container styles */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph and heading styles */
+p, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+/* Links styles */
+a {
+    color: hsl(152, 54%, 59%);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

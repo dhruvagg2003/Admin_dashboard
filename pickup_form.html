@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Waste Pickup Request Form</title>
+    <link rel="stylesheet" href="pickup_form.css">
+</head>
+<body>
+    <div class="container">
+        <h1>E-Waste Pickup Request</h1>
+        <form id="pickup-form" action="submit_form.php" method="post">
+            <!-- E-Waste Categories -->
+            <fieldset>
+                <legend><b>E-Waste Categories</b></legend>
+                <div>
+                    <label>
+                        <input type="checkbox" name="ewaste_category[]" value="Desktop Computers"> Desktop Computers
+                    </label>
+                    <label>
+                        <input type="checkbox" name="ewaste_category[]" value="Laptops"> Laptops
+                    </label>
+                    <label>
+                        <input type="checkbox" name="ewaste_category[]" value="Tablets"> Tablets
+                    </label>
+                    <label>
+                        <input type="checkbox" name="ewaste_category[]" value="Mobile Phones"> Mobile Phones
+                    </label>
+                    <label>
+                        <input type="checkbox" name="ewaste_category[]" value="Smartwatches"> Smartwatches
+                    </label>
+                    <label>
+                        <input type="checkbox" name="ewaste_category[]" value="Other"> Any Other Item
+                    </label>
+                    <!-- Add more categories here -->
+                    <!-- E-Waste Categories -->
+            
+            
+            <!-- Quantity of E-Waste -->
+            <fieldset>
+                <legend><b>Quantity of E-Waste</b></legend>
+                <label for="ewaste-quantity">Quantity:</label>
+                <input type="number" id="ewaste-quantity" name="ewaste_quantity" required>
+            </fieldset>
+            <!-- Location Information -->
+            <fieldset>
+                <legend><b>Location Information</b></legend>
+                <label for="pickup-location">Pickup Location:</label>
+                <input type="text" id="pickup-location" name="pickup_location" required>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </fieldset>
+            <!-- Donation or Sale -->
+            <fieldset>
+                <legend><b>Donation or Sale</b></legend>
+                <label>Do you want to:</label>
+                <input type="radio" id="donate" name="donate_or_sell" value="Donate">
+                <label for="donate">Donate</label>
+                <input type="radio" id="sell" name="donate_or_sell" value="Sell">
+                <label for="sell">Sell</label>
+            </fieldset>
+            <!-- Submit Button -->
+            <input type="submit" value="Submit" onclick="sub()">
+        </form>
+    </div>
+
+    <script>
+        function sub(){
+            // Display an alert message
+            alert("Your response was submitted");
+            // Redirect to mod_index.html after the alert is closed
+            window.location.href = "mod_index.html";
+        }
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
