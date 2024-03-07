@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pickup Requests Dashboard</title>
+  <link rel="stylesheet" href="pickup_dash.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Pickup Requests Dashboard</h1>
+  <div class="stats">
+    <span class="status-total" id="totalPickups">Total Pickups: 8</span>
+    <span class="status-total" id="totalScheduled">Scheduled: 0</span>
+    <span class="status-total" id="totalPending">Pending: 0</span>
+    <span class="status-total" id="totalServed">Served: 0</span>
+    <span class="status-total" id="totalNotScheduled">Not Scheduled: 8</span>
+  </div>
+  <div class="sort-buttons">
+    <button onclick="sortTable('status')">Sort by Status</button>
+    <button id="sortByDateBtn">Sort by Date</button>
+
+  </div>
+  <table id="pickupTable">
+    <thead>
+      <tr>
+        <th>Serial Number</th>
+        <th>Order ID</th>
+        <th>User Name</th>
+        <th>Contact no </th>
+        <th>Ewaste Items</th>
+        <th>Amount of E-Waste</th>
+        <th>Condition of E-Waste</th>
+        <th>Existing Status</th>
+        <th>Pickup Date</th>
+        <th>Pickup Time</th>
+        <th>Action</th>
+        <th>User Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>#1234</td>
+        <td>Japneet</td>
+        <td>6283871263</td>
+        <td>laptop(2)</td>
+        <td>5 kg</td>
+        <td>Not working</td>
+        <td class="status-cell scheduled" id="status1">Not Scheduled Yet</td>
+        <td class="date-cell" id="date1">-</td>
+        <td class="time-cell" id="time1">-</td>
+        <td>
+          <button class="update-btn" onclick="openPopup('1')">Update Status</button>
+        </td>
+        <td>Dhakoli</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>#1235</td>
+        <td>kamankshi</td>
+        <td>9876667325</td>
+        <td>laptop(1) , charger(2)</td>
+        <td>3 kg</td>
+        <td>Broken</td>
+        <td class="status-cell pending" id="status2">Pending</td>
+        <td class="date-cell" id="date2">-</td>
+        <td class="time-cell" id="time2">-</td>
+        <td>
+          <button class="update-btn" onclick="openPopup('2')">Update Status</button>
+        </td>
+        <td> Sangrur</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>#1236</td>
+        <td>Dhruv</td>
+        <td>8059291777</td>
+        <td>mobile(2) <br>charger(4) <br>laptop(1)</td>
+        <td>8 kg</td>
+        <td>Destroyed</td>
+        <td class="status-cell served" id="status3">Served</td>
+        <td class="date-cell" id="date3">2024-03-06</td>
+        <td class="time-cell" id="time3">12:00 PM</td>
+        <td>
+          <button class="update-btn" onclick="openPopup('3')">Update Status</button>
+        </td>
+        <td>Mohali</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>#1237</td>
+        <td>Abhishek Guleria</td>
+        <td>9350052590</td>
+        <td>powerbank(2) <br>mobile phone(2)</td>
+        <td>4 kg</td>
+        <td>Not working</td>
+        <td class="status-cell scheduled" id="status4">Not Scheduled Yet</td>
+        <td class="date-cell" id="date4">-</td>
+        <td class="time-cell" id="time4">-</td>
+        <td>
+          <button class="update-btn" onclick="openPopup('4')">Update Status</button>
+        </td>
+        <td>Kalka</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>#1238</td>
+        <td>laveena</td>
+        <td>1234567890</td>
+        <td>hairdryer(2) <br> laptop charger(2) </td>
+        <td>5 kg</td>
+        <td>Broken</td>
+        <td class="status-cell pending" id="status5">Pending</td>
+        <td class="date-cell" id="date5">-</td>
+        <td class="time-cell" id="time5">-</td>
+        <td>
+          <button class="update-btn" onclick="openPopup('5')">Update Status</button>
+        </td>
+        <td>Kalpana Hostel</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>#1239</td>
+        <td>simran</td>
+        <td>5685265642</td>        
+        <td>laptop(1) <br>charger(1)</td>
+        <td>3 kg</td>
+        <td>Not working</td>
+        <td class="status-cell served" id="status6">Served</td>
+        <td class="date-cell" id="date6">2024-03-07</td>
+        <td class="time-cell" id="time6">11:00 AM</td>
+        <td>
+          <button class="update-btn" onclick="openPopup('6')">Update Status</button>
+        </td>
+        <td>Dappar</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>#1240</td>
+        <td>deepshikha</td>
+        <td>9876543215</td>
+        <td>phone(3)</td>
+        <td>2kg</td>
+        <td>Not working</td>
+        <td class="status-cell scheduled" id="status7">Not Scheduled Yet</td>
+        <td class="date-cell" id="date7">-</td>
+        <td class="time-cell" id="time7">-</td>
+        <td>
+          <button class="update-btn" onclick="openPopup('7')">Update Status</button>
+        </td>
+        <td>dhakoli</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>#1241</td>
+        <td>Shreya</td>
+        <td>8059291777</td>
+        <td>laptop(2) <br> charger(3)</td>
+        <td>5kg</td>
+        <td>Destroyed</td>
+        <td class="status-cell pending" id="status8">Not Scheduled</td>
+        <td class="date-cell" id="date8">-</td>
+        <td class="time-cell" id="time8">-</td>
+        <td>
+          <button class="update-btn" onclick="openPopup('8')">Update Status</button>
+        </td>
+        <td>Kharar</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup">
+    <span class="close-btn" onclick="closePopup()">×</span>
+    <h2>Update Status</h2>
+    <form onsubmit="return updateStatus()">
+      <label for="status">Select Status:</label><br>
+      <select id="statusSelect" class="status-select">
+        <option value="scheduled">Schedule</option>
+        <option value="pending">Pending</option>
+        <option value="served">Served</option>
+      </select>
+      <br><br>
+      <label for="pickupDate">Pickup Date:</label><br>
+      <input type="date" id="pickupDate" class="pickup-date"><br><br>
+      <label for="pickupTime">Pickup Time:</label><br>
+      <input type="time" id="pickupTime" class="pickup-time"><br><br>
+      <button type="submit" class="update-status-btn">Update</button>
+    </form>
+  </div>
+</div>
+
+<script src="pickup_dash.js"></script>
+
+</body>
+</html>

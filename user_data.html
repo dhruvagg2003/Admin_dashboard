@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Information - E-Waste SmartHub</title>
+  <link rel="stylesheet" href="user_data.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="font-family: 'Times New Roman', Times, serif;">
+
+<div class="container">
+  <h1>User Information</h1>
+  <div class="summary">
+    <p>Total Users: <span id="totalUsers">0</span></p>
+    <p>E-Waste Donated: <span id="totalEWaste">0 grams</span></p>
+    <p>Eco Points Earned: <span id="totalEcoPoints">0</span></p>
+  </div>
+  <div class="sorting-buttons-container">
+    <button onclick="sortByEWasteDonated()">Sort by E-Waste Donated</button>
+    <button onclick="sortByEcoCreditsEarned()">Sort by Eco Credits Earned</button>
+  </div>
+  <table id="userTable">
+    <thead>
+      <tr>
+        <th>Sno</th>
+        <th>Name</th>
+        <th class="phonecol">Phone No</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Eco Credits Earned</th>
+        <th>E-Waste Donated (grams)</th>
+        <th>Status</th>
+        <th>Donation History</th>
+      </tr>
+    </thead>
+    <tbody id="userTableBody">
+      <!-- User data will be populated here -->
+    </tbody>
+  </table>
+</div>
+
+<div id="graphPopup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h2>Donation History</h2>
+    <canvas id="donationChart" width="400" height="400"></canvas>
+  </div>
+</div>
+
+<script src="user_data.js"></script>
+</body>
+</html>

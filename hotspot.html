@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotspot Dashboard</title>
+    <link rel="stylesheet" href="hotspot.css">
+</head>
+<body>
+    <div class="page-header">
+        <h1 class="heading">HOTSPOT DASHBOARD</h1>
+        <div class="summary">
+            <div class="circle">
+                <div class="value">2600kg</div>
+                <div class="label">Total E-waste</div>
+            </div>
+            <div class="circle">
+                <div class="value">6</div>
+                <div class="label">Hotspots</div>
+            </div>
+            <div class="add-hotspot-container">
+                <button id="addHotspotButton">Add Hotspot</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Sample cards -->
+        <div class="card hotspot">
+            <div class="card-title">Area: Mohali</div>
+            <div class="precise-location">Precise Location: Near Landran</div>
+            <div class="bulk-e-waste">Bulk of E-waste: 500 kg</div>
+            <div class="scheduled-recycler"></div>
+            <button class="schedule-recycler">Schedule Recycler</button>
+            <button class="update-status">Update Status</button>
+            <button class="delete">Delete</button>
+        </div>
+        <div class="card hotspot">
+            <div class="card-title">Area: Ludhiana</div>
+            <div class="precise-location">Precise Location: XYZ street,Model Town</div>
+            <div class="bulk-e-waste">Bulk of E-waste: 300 kg</div>
+            <div class="scheduled-recycler"></div>
+            <button class="schedule-recycler">Schedule Recycler</button>
+            <button class="update-status">Update Status</button>
+            <button class="delete">Delete</button>
+        </div>
+        <div class="card hotspot">
+            <div class="card-title">Area: Jalandhar</div>
+            <div class="precise-location">Precise Location: DEF road, Model House Complex</div>
+            <div class="bulk-e-waste">Bulk of E-waste: 350 kg</div>
+            <div class="scheduled-recycler"></div>
+            <button class="schedule-recycler">Schedule Recycler</button>
+            <button class="update-status">Update Status</button>
+            <button class="delete">Delete</button>
+        </div>
+        <div class="card hotspot">
+            <div class="card-title">Area: Chandigarh </div>
+            <div class="precise-location">Precise Location: Sector 17</div>
+            <div class="bulk-e-waste">Bulk of E-waste: 450 kg</div>
+            <div class="scheduled-recycler"></div>
+            <button class="schedule-recycler">Schedule Recycler</button>
+            <button class="update-status">Update Status</button>
+            <button class="delete">Delete</button>
+        </div>
+        <div class="card hotspot">
+            <div class="card-title">Area: Patiala</div>
+            <div class="precise-location">Precise Location: Near leela Bhawan, JKL road</div>
+            <div class="bulk-e-waste">Bulk of E-waste: 500 kg</div>
+            <div class="scheduled-recycler"></div>
+            <button class="schedule-recycler">Schedule Recycler</button>
+            <button class="update-status">Update Status</button>
+            <button class="delete">Delete</button>
+        </div>
+        <div class="card hotspot">
+            <div class="card-title">Area: Bathinda</div>
+            <div class="precise-location">Precise Location:On mall road </div>
+            <div class="bulk-e-waste">Bulk of E-waste: 500 kg</div>
+            <div class="scheduled-recycler"></div>
+            <button class="schedule-recycler">Schedule Recycler</button>
+            <button class="update-status">Update Status</button>
+            <button class="delete">Delete</button>
+        </div>
+        <!-- Add more cards here -->
+
+    </div>
+
+    <!-- Recycler Popup -->
+    <div class="popup" id="recyclerPopup">
+        <div class="popup-content">
+            <h2>Select Recycler</h2>
+            <select id="recyclerSelect">
+                <option value="recycler1">Recycler 1 - Ludhiana</option>
+                <option value="recycler2">Recycler 2 - Jalandhar</option>
+                <option value="recycler3">Recycler 3 - Amritsar</option>
+                <option value="recycler4">Recycler 4 - Patiala</option>
+                <option value="recycler5">Recycler 5 - Bathinda</option>
+                <option value="recycler6">Recycler 6 - Mohali</option>
+                <!-- Add more recyclers as needed -->
+            </select>
+            <button id="selectRecycler">Select</button>
+        </div>
+    </div>
+     
+       
+    
+
+    <script src="hotspot.js"></script>
+</body>
+</html>

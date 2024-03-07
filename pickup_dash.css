@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #444;
+}
+
+.container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.update-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.update-btn:hover {
+    background-color: #0056b3;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+}
+
+.status-select, .pickup-date, .pickup-time {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.update-status-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.update-status-btn:hover {
+    background-color: #45a049;
+}
+
+.stats {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.status-total {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.sort-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sort-buttons button {
+    margin-right: 10px;
+}
+
+.status-cell.scheduled {
+    color: green;
+    font-weight: bold;
+
+}
+
+.status-cell.pending {
+    color: red;
+    font-weight: bold;
+}
+
+.status-cell.served {
+    color: blue;
+    font-weight: bold;
+}
+
+.date-cell.scheduled,
+.time-cell.scheduled {
+    color: green;
+}
+
+.date-cell.pending,
+.time-cell.pending {
+    color: red;
+}
+
+.date-cell.served,
+.time-cell.served {
+    color: blue;
+}
+/* Your existing CSS styles */
+
+.status-cell.pending {
+    color: red;
+}
+
+.status-cell.completed {
+    color: blue;
+}
+
+.sort-buttons button {
+    margin-right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sort-buttons button:hover {
+    background-color: #0056b3;
+}
+/* Your existing CSS styles */
+
+.status-cell.scheduled {
+    color: orange;
+}
+
+.status-cell.pending {
+    color: red;
+}
+
+.status-cell.served {
+    color: blue;
+}
+
+.date-cell, .time-cell {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+}

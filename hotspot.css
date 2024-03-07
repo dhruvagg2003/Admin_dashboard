@@ -1,0 +1,224 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+.page-header {
+    background: linear-gradient(135deg, #2980b9, #2c3e50);
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.page-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+}
+
+.circle .value {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.circle .label {
+    font-size: 0.9rem;
+    text-transform: none;
+    font-weight: bold;
+}
+
+.add-hotspot-container {
+    display: flex;
+    align-items: center;
+}
+
+#addHotspotButton {
+    width: 100px; /* Set a fixed width to make it circular */
+    height: 100px; /* Set a fixed height to make it circular */
+    border: none;
+    border-radius: 50%; /* Make it circular */
+    background: rgba(255, 255, 255, 0.2); /* Use the same background color as the circles */
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 20px; /* Add some space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addHotspotButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Adjust hover color */
+    transform: scale(1.1);
+}
+
+
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    border-radius: 10px;
+    width: calc(27% - 15px);
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: #f2f2f2;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.precise-location,
+.bulk-e-waste,
+.scheduled-recycler {
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    padding: 10px 10px;
+    border: none;
+    margin: 1px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: center;
+    animation: popupFadeIn 0.5s forwards;
+}
+
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.select-recycler {
+    margin-top: 10px;
+    font-size: 1rem;
+    padding: 10px 0;
+}
+
+#selectRecycler {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+#selectRecycler:hover {
+    background-color: #45a049;}
+/* Add gradient background for hotspot */
+.hotspot {
+    background: linear-gradient(135deg, #f9fb88, #ed9e15);
+}
+
+/* Add gradient background for scheduled hotspot */
+.hotspot.green {
+    background: linear-gradient(135deg, #6bd425, #aefaae);
+}
+/* Add any necessary CSS styles for the modal here */
